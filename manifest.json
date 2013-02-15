@@ -1,0 +1,22 @@
+{
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "background": {
+      "scripts": ["js/jquery.js", "js/background.js"],
+      "persistent": false
+    },
+    "version": "1.0",
+    "name": "DriveViewer [ANTP]",
+    "description": "Awesome GDrive Spreadsheet Grabber! [ANTP]",
+    "icons": {
+      "128": "icon.png"
+    },
+    "manifest_version": 2,
+    "web_accessible_resources": ["widget.html","background.html"],
+    "content_security_policy": "script-src 'self' https://script.google.com/ https://script.googleusercontent.com/; object-src 'self'",
+    "permissions": [
+      "https://script.google.com/*",
+      "https://scripts.googleusercontent.com/*",
+      "http://gnarlyrad.com/*",
+      "https://docs.google.com/*"
+    ]
+}
