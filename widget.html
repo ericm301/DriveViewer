@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html ng-app ng-csp>
+<html ng-app="myApp" ng-csp>
   <head>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-cookies.js"></script>
     <script type="text/javascript" src="js/widget.js"></script>
     <link rel="stylesheet" href="css/css.css" type="text/css" media="screen" />
   </head>
 
   <body>
-    <table ng-controller="ShellCtrl">
-      <tr ng-repeat="rowData in tableData">
-        <td ng-repeat="colData in rowData">
-          {{colData}}
+    <table ng-controller="ShellCtrl" ng-class="{'positive':diff>0,'negative':diff<0}">
+      <tr ng-repeat="rowData in tableData" ng-class="'row'+$index;">
+        <td ng-repeat="cellData in rowData" ng-class="{'positive':(cellData>0&&$index==1),'negative':(cellData<0&&$index==1)}">
+          {{cellData}}
         </td>
       </tr>
     </table>

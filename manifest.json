@@ -1,7 +1,7 @@
 {
     "update_url": "http://clients2.google.com/service/update2/crx",
     "background": {
-      "scripts": ["js/jquery.js", "js/background.js"],
+      "scripts": ["js/jquery.js", "js/background.js","js/angular.js","js/angular-cookies.js"],
       "persistent": false
     },
     "version": "1.0",

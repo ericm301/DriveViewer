@@ -1,10 +1,10 @@
 ﻿[File0]
-DataLen=232
-TopLine=0
-SelStart=158
-SelStop=158
+DataLen=496
+TopLine=3
+SelStart=270
+SelStop=270
 RectSel=0
-CaretPos=158
+CaretPos=270
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -34,13 +34,13 @@ FTPFilename=
 ForcedReadOnly=0
 
 [File1]
-DataLen=79107
+DataLen=488868
 TopLine=0
 SelStart=0
 SelStop=0
 RectSel=0
 CaretPos=0
-CaretVisible=0
+CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
 SelStopAlt=0
@@ -50,7 +50,7 @@ CaretVisibleAlt=0
 BookmarkCount=1
 Folding=
 FileType=js
-DataFormat=win1252
+DataFormat=utf8
 AutoIndent=0
 NumberLines=0
 WordWrapIndent=0
@@ -63,18 +63,18 @@ RecordSize=-2
 HexEditor=0
 HexSections=-2
 ProjectStatus=0
-RelativeFilename=js\angular.min.js
-Filename=C:\Users\admin\Documents\GitHub\DriveViewer\js\angular.min.js
+RelativeFilename=js\angular.js
+Filename=C:\Users\admin\Documents\GitHub\DriveViewer\js\angular.js
 FTPFilename=
 ForcedReadOnly=0
 
 [File2]
 DataLen=604
 TopLine=0
-SelStart=85
-SelStop=85
+SelStart=604
+SelStop=604
 RectSel=0
-CaretPos=85
+CaretPos=604
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -139,12 +139,12 @@ FTPFilename=
 ForcedReadOnly=0
 
 [File4]
-DataLen=288
+DataLen=927
 TopLine=0
-SelStart=285
-SelStop=285
+SelStart=753
+SelStop=753
 RectSel=0
-CaretPos=285
+CaretPos=753
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -174,12 +174,12 @@ FTPFilename=
 ForcedReadOnly=0
 
 [File5]
-DataLen=565
+DataLen=802
 TopLine=0
-SelStart=448
-SelStop=448
+SelStart=665
+SelStop=665
 RectSel=0
-CaretPos=448
+CaretPos=665
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -209,12 +209,12 @@ FTPFilename=
 ForcedReadOnly=0
 
 [File6]
-DataLen=778
+DataLen=818
 TopLine=0
-SelStart=270
-SelStop=270
+SelStart=181
+SelStop=181
 RectSel=0
-CaretPos=270
+CaretPos=181
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -244,9 +244,9 @@ FTPFilename=
 ForcedReadOnly=0
 
 [EditPad Project]
-Managed=0
+Managed=1
 BookmarksProjectWide=0
-TabIndex=2
+TabIndex=4
 FirstFileTab=0
 FileCount=7
 RemovedCount=3

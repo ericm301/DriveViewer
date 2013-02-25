@@ -11,10 +11,28 @@ table {
   font: 11pt arial;
 }
 
+table.positive { 
+  border-color:      #8f8;
+}
+
+table.negative {
+  border-color:      #f88;
+}
+
 tr {
   height: 25px;
 }
 
 td {
   text-align: center;
+}
+
+.row1 .positive {
+  background-color:  #8f8;
+  border-color:      #8f8;
+}
+
+.row1 .negative { 
+  background-color: #f88;
+  border-color:     #f88;
 }
