@@ -27,3 +27,15 @@ Nice, google. A simple coding error in a tutorial. Well played. I thought you we
 Once you get all those files into a directory, open chrome://extensions, and click on the button "Load Unpacked Extensions" Point the file selector at your folder, and viola! kitties everywhere!
 
 That's all for now. Soon, I'll turn this into an ANTP widget.
+
+********
+
+20130225:
+-Feb 25, 2013
+
+So, I've learned alot in a month, but I still don't know if I'm doing this right. ANTP seems to live on angular, so I'm picking that up, but it's sometimes confusing when I do something wrong, like not injecting a module...
+
+As I've said, I have no experience with this sort of thing. I'm just relying on community help and docs, and trial and error.  Probably writing the kludgiest code in the world...
+
+Anyway, I have this spreadsheet that I want to display in a widget. Just one sheet. I did the XMLHttpRequest thing, and found that gDrive doesn't do CORS (cors.org). Then I went jQuery and JSONP, got that to work. Then, angular. Angular is pretty straightforward, once you know the ropes, like injection.
+
