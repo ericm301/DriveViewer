@@ -1,10 +1,10 @@
 ﻿[File0]
 DataLen=496
-TopLine=3
-SelStart=270
-SelStop=270
+TopLine=0
+SelStart=48
+SelStop=48
 RectSel=0
-CaretPos=270
+CaretPos=48
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -139,12 +139,12 @@ FTPFilename=
 ForcedReadOnly=0
 
 [File4]
-DataLen=927
-TopLine=0
-SelStart=753
-SelStop=753
+DataLen=1507
+TopLine=6
+SelStart=1214
+SelStop=1214
 RectSel=0
-CaretPos=753
+CaretPos=1214
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0
@@ -174,12 +174,12 @@ FTPFilename=
 ForcedReadOnly=0
 
 [File5]
-DataLen=802
+DataLen=817
 TopLine=0
-SelStart=665
-SelStop=665
+SelStart=817
+SelStop=817
 RectSel=0
-CaretPos=665
+CaretPos=817
 CaretVisible=1
 TopLineAlt=0
 SelStartAlt=0

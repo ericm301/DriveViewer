@@ -1,25 +1,45 @@
 var dataURL = "https://script.google.com/macros/s/AKfycbxMjXzTaUy0LH7b8AtSmZ7Cihkys11D65kuyoEuR5IxHnFM70g/exec";
 
-angular.module('myApp', ['ngCookies']);
+angular.module('myApp', ['ngCookies','filters']);
 
 function ShellCtrl($scope,$http,$timeout,$cookieStore) {
   var repeat = function() {
     $http.jsonp(dataURL + '?prefix=JSON_CALLBACK').success(
       function (results) {
-        var delay = 5000, diff = 0;
+        $scope.delay = 5000;
+        var diff = 0;
         var oldresults = $cookieStore.get("results") || ($cookieStore.put("results",results),results);
-        if ( oldresults[5][0] != results[5][0] ) 
+        if ( oldresults != results ) 
         {
-          delay = 55000 + 997 * 2;  // 997 is greatest prime less that 1000
+          delay = 60000;
           $cookieStore.put("results",results);
         }
-        results[5][1] = Math.round((results[1][0] - oldresults[1][0])*100)/100;
+        results[5][1] = (results[1][0] - oldresults[1][0]).toFixed(2);
         $scope.tableData = results;
         $scope.diff = results[5][1];
-        // $scope.$apply();
         $timeout(repeat, delay);
       });
   }
   repeat();
 }
+
+angular.module( 'filters', [] )
+  .filter( 'textornumber', function() {
+    return function ( item, digits ) {
+      //var itemUndefined = ( item === undefined );
+      //var itemBlank = ( item === "" );
+      //var itemNonDigit = item.toString().match( /[^.\d]/ );
+      return ( ( item === undefined ) || ( item === "" ) || item.toString().match( /[^.\d-]/ ) ) ?
+            item : parseFloat( item ).toFixed( digits || 2 );
+      };
+  });
+
+
+
+//  every minute the spreadsheet changes, so...
+//    start polling the page every 5s
+//    when page changes, poll every 60s
+//    if page doesn't change between polls, go back to start
+
+
 
