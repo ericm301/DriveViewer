@@ -6,18 +6,18 @@ function ShellCtrl($scope,$http,$timeout,$cookieStore) {
   var repeat = function() {
     $http.jsonp(dataURL + '?prefix=JSON_CALLBACK').success(
       function (results) {
-        $scope.delay = 5000;
+        $scope.delay = 15000;
         var diff = 0;
         var oldresults = $cookieStore.get("results") || ($cookieStore.put("results",results),results);
         if ( oldresults != results ) 
         {
-          delay = 60000;
+          // delay = 60000;
           $cookieStore.put("results",results);
         }
         results[5][1] = (results[1][0] - oldresults[1][0]).toFixed(2);
         $scope.tableData = results;
         $scope.diff = results[5][1];
-        $timeout(repeat, delay);
+        $timeout(repeat, $scope.delay);
       });
   }
   repeat();
