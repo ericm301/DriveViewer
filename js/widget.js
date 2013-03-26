@@ -6,7 +6,7 @@ function ShellCtrl($scope,$http,$timeout,$cookieStore) {
   var repeat = function() {
     $http.jsonp(dataURL + '?prefix=JSON_CALLBACK').success(
       function (results) {
-        $scope.delay = 15000;
+        $scope.delay = 5000;
         var diff = 0;
         var oldresults = $cookieStore.get("results") || ($cookieStore.put("results",results),results);
         if ( oldresults[5][3] != results[5][3] )  //   cell(5,3) is last trade time

@@ -11,7 +11,7 @@
   <body>
     <table ng-controller="ShellCtrl" ng-class="{'positive':diff>0,'negative':diff<0}">
       <tr ng-repeat="rowData in tableData" ng-class="'row'+$index;">
-        <td ng-repeat="cellData in rowData" ng-class="{'positive':(cellData>0&&$index==1),'negative':(cellData<0&&$index==1)}">
+        <td ng-repeat="cellData in rowData" ng-class="{'positive':(cellData>=0&&$index==1),'negative':(cellData<0&&$index==1)}">
           {{cellData|textornumber:2}}
         </td>
       </tr>
