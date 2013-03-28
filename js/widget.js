@@ -6,16 +6,15 @@ function ShellCtrl($scope,$http,$timeout,$cookieStore) {
   var repeat = function() {
     $http.jsonp(dataURL + '?prefix=JSON_CALLBACK').success(
       function (results) {
-        $scope.delay = 5000;
+        $scope.delay = 12000;
         var diff = 0;
         var oldresults = $cookieStore.get("results") || ($cookieStore.put("results",results),results);
-        if ( oldresults[5][3] != results[5][3] )  //   cell(5,3) is last trade time
-        {
-          $cookieStore.put("results",results);
-        } 
+        $cookieStore.put("results",results);
         results[5][1] = (results[1][0] - oldresults[1][0]).toFixed(2);
         $scope.tableData = results;
         $scope.diff = results[5][1];
+        $scope.updating = true;
+        $timeout( function() { $scope.updating = false; }, 500 );
         $timeout(repeat, $scope.delay);
       });
   }

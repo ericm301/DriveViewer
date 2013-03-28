@@ -19,6 +19,10 @@ table.negative {
   border-color:      #f88;
 }
 
+table.updating {
+  background-color:  #cee;
+}
+
 tr {
   height: 25px;
 }
